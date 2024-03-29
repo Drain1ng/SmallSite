@@ -3,10 +3,10 @@ from random import random
 from .forms import posForm
 from django.shortcuts import render
 
-centered = (55.78574364129168, 12.521466792669964)
+center = (55.78574364129168, 12.521466792669964)
 
 def centered(point):
-    return [(point[i] % 360) - centered[i] for i in range(len(point))]
+    return [(point[i] % 360) - center[i] for i in range(len(point))]
 
 def get_quadrant(centered_point):
     lat = centered_point[0]
