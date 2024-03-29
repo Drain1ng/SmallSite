@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<style>
+    body {text-align: center;}
+</style>
+<html>
+<body>
+    <h1>Hvilken kvadrant ligger et koordinat i?</h1>
+    <p>Indsæt koordinater.</p>
+    <form action="/findQuadrant/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>the quadrant is: {{ quadrant }}</p>
+
+    <p>Heyyy det her antager at jorden er en perfekt kugle, og så har jeg egentligt bare gættet på nogen udregninger, som ligner at de virker, så ingen ved om det er korrekt</p>
+</body>
+</html> 
